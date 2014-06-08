@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-# angular-seed — the seed for AngularJS apps
+# glean 
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
-
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
+This is the source code for the "Glean for good" application
 
 ## Getting Started
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+To get you started you can simply clone the glean repository and install the dependencies:
 
 ### Prerequisites
 
@@ -28,8 +19,8 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 Clone the angular-seed repository using [git][git]:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/gleanforgood/glean.git
+cd glean
 ```
 
 ### Install Dependencies
