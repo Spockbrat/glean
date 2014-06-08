@@ -16,7 +16,7 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone Glean
 
-Clone the angular-seed repository using [git][git]:
+Clone the angular-seed repository using [git]:
 
 ```
 git clone https://github.com/gleanforgood/glean.git
@@ -151,4 +151,9 @@ Glean
 =====
 
 Glean for Good
->>>>>>> 82a024176221e07309a7e85000cc7e725f84c922
+=======
+#Glean for Good 
+
+Built with Angular - See [Angular-Seed](https://github.com/angular/angular-seed) repository for more info.
+
+Assets and other working documentation can be found [here](https://drive.google.com/folderview?id=0BzsGiNmben40aU1DQktNa2FKSnM&usp=sharing).
