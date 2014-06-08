@@ -11,12 +11,9 @@ To get you started you can simply clone the Glean repository and install the dep
 You need git to clone the Glean repository. You can get it from
 [http://git-scm.com/](http://git-scm.com/).
 
-We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
-
 ### Clone Glean
 
-Clone the angular-seed repository using [git]:
+Clone the Glean repository using [git]:
 
 ```
 git clone https://github.com/gleanforgood/glean.git
@@ -25,7 +22,7 @@ cd glean
 
 ### Install Dependencies
 
-We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+We have two kinds of dependencies in this project: tools and framework code.  The tools help
 us manage and test the application.
 
 * We get the tools we depend upon via `npm`, the [node package manager][npm].
@@ -60,11 +57,11 @@ Now browse to the app at `http://localhost:8000/app/index.html`.
 
 ## Testing
 
-There are two kinds of tests in the angular-seed application: Unit tests and End to End tests.
+There are two kinds of tests : Unit tests and End to End tests.
 
 ### Running Unit Tests
 
-The angular-seed app comes preconfigured with unit tests. These are written in
+Unit are written in
 [Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma
 configuration file to run them.
 
@@ -94,8 +91,8 @@ npm run test-single-run
 npm start
 ```
 
-In addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed
-project comes with a predefined script to do this:
+In addition, since Protractor is built upon WebDriver we need to install this.  The Glean project comes 
+with a predefined script to do this:
 
 ## Updating files
 
@@ -115,7 +112,7 @@ This will find the latest versions that match the version ranges specified in th
 
 ### Running the App during Development
 
-The angular-seed project comes preconfigured with a local development webserver.  It is a node.js
+The project comes preconfigured with a local development webserver.  It is a node.js
 tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
 install the tool globally:
 
@@ -133,15 +130,13 @@ http-server
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
 configure your server to serve the files under the `app/` directory.
 
+## Documentation
+
+Assets and other working documentation can be found [here](https://drive.google.com/folderview?id=0BzsGiNmben40aU1DQktNa2FKSnM&usp=sharing).
+
 ## Contact
 
 For more information on Glean please contact gleanforgood@googlegroups.com
-
-## Documentation
-
-Built with Angular - See [Angular-Seed](https://github.com/angular/angular-seed) repository for more info.
-
-Assets and other working documentation can be found [here](https://drive.google.com/folderview?id=0BzsGiNmben40aU1DQktNa2FKSnM&usp=sharing).
 
 [git]: http://git-scm.com/
 [bower]: http://bower.io
