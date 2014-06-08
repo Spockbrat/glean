@@ -137,6 +137,12 @@ configure your server to serve the files under the `app/` directory.
 
 For more information on Glean please contact gleanforgood@googlegroups.com
 
+## Documentation
+
+Built with Angular - See [Angular-Seed](https://github.com/angular/angular-seed) repository for more info.
+
+Assets and other working documentation can be found [here](https://drive.google.com/folderview?id=0BzsGiNmben40aU1DQktNa2FKSnM&usp=sharing).
+
 [git]: http://git-scm.com/
 [bower]: http://bower.io
 [npm]: https://www.npmjs.org/
@@ -146,14 +152,3 @@ For more information on Glean please contact gleanforgood@googlegroups.com
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
-=======
-Glean
-=====
-
-Glean for Good
-=======
-#Glean for Good 
-
-Built with Angular - See [Angular-Seed](https://github.com/angular/angular-seed) repository for more info.
-
-Assets and other working documentation can be found [here](https://drive.google.com/folderview?id=0BzsGiNmben40aU1DQktNa2FKSnM&usp=sharing).
