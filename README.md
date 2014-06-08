@@ -1,4 +1,0 @@
-glean
-=====
-
-Glean for Good
