@@ -5,6 +5,7 @@
 angular.module('myApp.controllers', [])
   .controller('DonorCtrl', ['$scope', 'DonorService', function($scope, DonorService) {
 	  $scope.map = {
+	      //Chicago
 	      center: {
 	          latitude: 41.8819,
 	          longitude: -87.6278
@@ -138,14 +139,22 @@ angular.module('myApp.controllers', [])
 		$scope.volunteers = [{
 		  name: "Ashish Pujari",
 		  address: "505 Lake Shore Dr, Chicago",
-		  contact: "312-454-5343"
+		  contact: "ashis_pujari@yahoo.com"
 		}, {
 		  name: "Harish Naik",
 		  address: "505 Lake Shore Dr, Chicago",
 		  contact: "312-454-5343"
 		}, {
-		  name: "Whole Foods",
+		  name: "Brittany VanPutten",
 		  address: "505 Lake Shore Dr, Chicago",
-		  contact: "312-454-5343"
+		  contact: "Brittanyvanputten@gmail.com"
+		},{
+		  name: "Sam Pedley",
+		  address: "505 Lake Shore Dr, Chicago",
+		  contact: "sjpeds@gmail.com"
+		},{
+		  name: "Scott Beckmeyer",
+		  address: "505 Lake Shore Dr, Chicago",
+		  contact: "sbeckmeyer@gmail.com"
 		}];
   }]);

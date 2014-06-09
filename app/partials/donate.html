@@ -1,49 +1,52 @@
 <div class="container" ng-controller="DonateCtrl">
-    <h3>Donate Food</h3>
-	<div class="col-md-4">
-		<form role="form-horizontal" ng-submit="add(donation)">
-			<div class="form-group" ng-controller="FoodCtrl">
-				<select ng-model="$parent.donation.category" ng-required="true" ng-options="category.name for category in categories" placeholder="Category" class="form-control">
+ <div class="panel panel-default">
+    <div class="panel-heading">Donate</div>
+      <div class="panel-body">
+		<div class="col-md-4">
+			<form role="form-horizontal" ng-submit="add(donation)">
+				<div class="form-group" ng-controller="FoodCtrl">
+					<select ng-model="$parent.donation.category" ng-required="true" ng-options="category.name for category in categories" placeholder="Category" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="text" ng-model="donation.item" ng-required="true" placeholder="What" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="number" ng-model="donation.quantity" ng-required="true" placeholder="Quantity (lbs)" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="date" ng-model="donation.time" placeholder="Time Window" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="datetime-local" ng-model="donation.pickup" placeholder="Time Window" class="form-control">
+				</div>
+				<div class="form-group">
+					<textarea rows="3" ng-model="donation.comments"  class="form-control" placeholder="Comments"></textarea>
+				</div>
+				<button title="Add" type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
+				<button class="btn btn" type="reset">Clear</button>
+			</form>
+		</div>
+		<div class="col-md-8">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="donation in donations">
+					<table>
+						<tr>
+							<td class="col-md-3">
+								<h3>#{{$index+1}}. {{donation.item}}</h3>
+								<span class="badge">{{donation.quantity}} lbs</span>
+								Expires: {{donation.time}}
+							</td>
+							<td class="col-md-2">
+								<img ng-src="img/{{donation.category.image}}" class="img-thumbnail"/>
+							</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+			<div ng-show="donations.length">
+				<a title="Confirm" class="btn btn-success pull-right" ng-click="confirm(donations)"><span class="glyphicon glyphicon-ok"></span> Confirm</a>
+				<button class="btn btn">Cancel</button>
 			</div>
-			<div class="form-group">
-				<input type="text" ng-model="donation.item" ng-required="true" placeholder="What" class="form-control">
-			</div>
-			<div class="form-group">
-				<input type="number" ng-model="donation.quantity" ng-required="true" placeholder="Quantity (lbs)" class="form-control">
-			</div>
-			<div class="form-group">
-				<input type="date" ng-model="donation.time" ng-required="true"  placeholder="Time Window" class="form-control">
-			</div>
-			<div class="form-group">
-				<input type="datetime-local" ng-model="donation.pickup" ng-required="true"  placeholder="Time Window" class="form-control">
-			</div>
-			<div class="form-group">
-				<textarea rows="3" ng-model="donation.comments"  class="form-control" placeholder="Comments"></textarea>
-			</div>
-        	<button title="Add" type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
-			<button class="btn btn" type="reset">Clear</button>
-		</form>
-    </div>
-	<div class="col-md-8">
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="donation in donations">
-				<table>
-					<tr>
-						<td class="col-md-3">
-							<h3>#{{$index+1}}. {{donation.item}}</h3>
-							<span class="badge">{{donation.quantity}} lbs</span>
-							Expires: {{donation.time}}
-						</td>
-						<td class="col-md-2">
-							<img ng-src="img/{{donation.category.image}}" class="img-thumbnail"/>
-						</td>
-					</tr>
-				</table>
-			</li>
-		</ul>
-		<div ng-show="donations.length">
-			<a title="Confirm" class="btn btn-success pull-right" ng-click="confirm(donations)"><span class="glyphicon glyphicon-ok"></span> Confirm</a>
-			<button class="btn btn">Cancel</button>
 		</div>
 	</div>
 </div>
