@@ -81,7 +81,7 @@ angular.module('myApp.controllers', [])
 		}];
 
 
-  }]).controller('ReceiverCtrl', ['$scope', function($scope) {
+  }]).controller('RecipientCtrl', ['$scope', function($scope) {
 	  $scope.map = {
 	      center: {
 	          latitude: 41.8819,
@@ -90,7 +90,7 @@ angular.module('myApp.controllers', [])
 	      zoom: 10
  	};
 
-	$scope.receivers = [{
+	$scope.recipients = [{
 	  name: "Lakeview Pantry",
 	  address: "505 Lake Shore Dr, Chicago",
 	  contact: "312-454-5343"
@@ -136,6 +136,15 @@ angular.module('myApp.controllers', [])
 		  $scope.donations.push(donation);
 	  }
   }]).controller('VolunteerCtrl', ['$scope', 'DonorService', function($scope, DonorService) {
+
+	  	  $scope.map = {
+	  	      center: {
+	  	          latitude: 41.8819,
+	  	          longitude: -87.6278
+	  	      },
+	  	      zoom: 10
+	   	};
+
 		$scope.volunteers = [{
 		  name: "Ashish Pujari",
 		  address: "505 Lake Shore Dr, Chicago",

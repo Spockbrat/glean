@@ -12,11 +12,12 @@ angular.module('myApp', [
   'angles'
 ]).
 config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/home', {templateUrl: 'partials/home.html'});
   $routeProvider.when('/donors', {templateUrl: 'partials/donors.html', controller: 'DonorCtrl'});
-  $routeProvider.when('/receivers', {templateUrl: 'partials/receivers.html', controller: 'ReceiverCtrl'});
+  $routeProvider.when('/recipients', {templateUrl: 'partials/recipients.html', controller: 'RecipientCtrl'});
   $routeProvider.when('/volunteers', {templateUrl: 'partials/volunteers.html', controller: 'VolunteerCtrl'});
   $routeProvider.when('/donate', {templateUrl: 'partials/donate.html', controller: 'DonorCtrl'});
   $routeProvider.when('/ddash', {templateUrl: 'partials/donorsDash.html', controller: 'DonorCtrl'});
-  $routeProvider.when('/rdash', {templateUrl: 'partials/receiversDash.html', controller: 'DonorCtrl'});
+  $routeProvider.when('/rdash', {templateUrl: 'partials/recipientsDash.html', controller: 'DonorCtrl'});
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
