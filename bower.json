@@ -2,23 +2,26 @@
   "name": "glean",
   "description": "Glean - Food donation management",
   "version": "0.0.1",
-  "homepage": "https://github.com/glean",
+  "homepage": "https://github.com/gleanforgood/glean",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "jquery": null,
     "underscore": null,
-    "bootstrap": null,    
+    "bootstrap": null,
     "font-awesome": null,
-    "d3": null,
+    "d3": "~3.4.8",
     "angular": null,
     "angular-route": null,
     "angular-loader": null,
     "angular-resource": null,
     "angular-mocks": null,
     "angular-google-maps": null,
-    "chartjs": null,
-    "angles": null,
-    "html5-boilerplate": null
+    "html5-boilerplate": null,
+    "nvd3": "~1.1.15-beta",
+    "angularjs-nvd3-directives": "~0.0.7"
+  },
+  "resolutions": {
+    "d3": "~3.4.8"
   }
 }

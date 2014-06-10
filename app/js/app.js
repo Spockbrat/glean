@@ -9,7 +9,7 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'google-maps',
-  'angles'
+  'nvd3ChartDirectives'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html'});
