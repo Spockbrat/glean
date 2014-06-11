@@ -4,9 +4,12 @@
 angular.module('myApp.services', []).
   value('version', '0.1')
 
-/**
- * Trade Plan Service
- */
-.factory('DonorService', function ($resource, $http,  $q) {
-	 return $http.get('donors.json');
+.factory('DonorService', function ($resource) {
+	 return $resource('donors.json');
+})
+.factory('VolunteerService', function ($resource) {
+	return $resource('volunteers.json');
+})
+.factory('RecipientService', function ($resource) {
+	return $resource('recipients.json');
 });

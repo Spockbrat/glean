@@ -9,7 +9,8 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'google-maps',
-  'nvd3ChartDirectives'
+  'nvd3ChartDirectives',
+  'trNgGrid'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html'});
