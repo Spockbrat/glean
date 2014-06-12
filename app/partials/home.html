@@ -1,10 +1,27 @@
-
+<div class="container">
 	<div class="jumbotron">
 	  <div class="col-md-offset-3">
 		  <h2>Welcome to Glean</h2>
 		  <em>We connect food donors with recipients</em>
 		  <p>
-			<a href="#donate" class="btn btn-default btn-lg">Donate</a>
+			<a href="#donate" class="btn btn-success btn-lg">Donate</a>
 		  </p>
 	  </div>
 	</div>
+
+	<div class="col-md-offset-1" ng-controller="DonateCtrl">
+		<h5>Donations<h5>
+		<nvd3-scatter-chart
+			data="exampleData"
+			id="donations"
+			width="800"
+			height="400"
+			showYAxis="false"
+			interactive="true"
+			transitionDuration="1000"
+			tooltips="true"
+			showLegend="true">
+				<svg></svg>
+		</nvd3-scatter-chart>
+	</div>
+</div>

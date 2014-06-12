@@ -101,9 +101,10 @@
 					<div class="col-md-6">
 
 						<div class="pull-right" ng-init="chart='category'">
-							<select chosen ng-model="chart" id="chart">
+							<select ng-model="chart" id="chart">
 							  <option value="category">Category</option>
-							  <option value="recipient">Recipient</option>
+							  <option value="donor">Donor</option>
+							  <option value="target">Annual Targets</option>
 							</select>
 						</div>
 
@@ -121,9 +122,9 @@
 							</nvd3-discrete-bar-chart>
 						</div>
 
-						<div ng-show="chart=='recipient'">
+						<div ng-show="chart=='donor'">
 							<nvd3-discrete-bar-chart
-									data="recipientData"
+									data="donorData"
 									showXAxis="true"
 									showYAxis="true"
 									width="550"
@@ -133,6 +134,19 @@
 									showValues="true"
 									showLegend="true">
 							</nvd3-discrete-bar-chart>
+						</div>
+
+						<div ng-show="chart=='target'">
+							<nvd3-bullet-chart
+								data="targets"
+								interactive="true"
+        						tooltips="true"
+								id="exampleId"
+								margin="{left:65,top:60,bottom:60,right:5}"
+								width="550"
+								height="160">
+									<svg></svg>
+							</nvd3-bullet-chart>
 						</div>
 					</div>
 				</div>

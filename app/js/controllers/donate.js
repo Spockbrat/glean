@@ -34,4 +34,52 @@ controllers.controller('DonateCtrl', ['$scope', 'DonationService', function($sco
 		}
 	];
 
+	$scope.donorData = [
+		{
+			key: "Donor",
+			values: [
+				["Whole Foods", 197 ],
+				["Treasure Island" , 89 ],
+				["Marianos" , 67 ],
+				["Dominicks" , 90 ],
+				["Chipotle" , 45 ],
+				["Starbucks" , 23 ]
+			]
+		}
+	];
+
+	$scope.targets =  {
+		 "title": "Donations",
+		 "subtitle": "(lbs)",
+		 "ranges": [150, 225, 300],
+		 "measures": [220],
+		 "markers": [250]
+	 };
+
+	$scope.randomData = function (points) {
+		  var data = [],
+			  shapes = ['circle', 'cross', 'triangle-up', 'triangle-down', 'diamond', 'square'],
+			  groups = ["Chicago","Boston","New York","San Francisco","Washington D.C"],
+			  random = d3.random.normal();
+
+		  for (i = 0; i < groups.length; i++) {
+			data.push({
+			  key: groups[i],
+			  values: []
+			});
+
+			for (j = 0; j < points; j++) {
+			  data[i].values.push({
+				x: Math.floor((Math.random() * 365) + 1)
+			  , y: Math.floor((Math.random() * 100) + 1)
+			  , size: Math.floor((Math.random() * 200) + 1)   //Configure the size of each scatter point
+			  , shape: (Math.random() > 0.95) ? shapes[j % 6] : "circle"  //Configure the shape of each scatter point.
+			  });
+			}
+		  }
+		  return data;
+		}
+
+	$scope.exampleData = $scope.randomData(40);
+
   }]);
