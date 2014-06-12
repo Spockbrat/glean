@@ -11,7 +11,7 @@ controllers.controller('DonateCtrl', ['$scope', 'DonationService', function($sco
 			key: "Category",
 			values: [
 				["Fruits", 89 ],
-				["Meat" , 10 ],
+				["Meat" , 16 ],
 				["Vegetables" , 56 ],
 				["Grains" , 65 ],
 				["Dairy" , 28 ],
@@ -24,12 +24,12 @@ controllers.controller('DonateCtrl', ['$scope', 'DonationService', function($sco
 		{
 			key: "Recipient",
 			values: [
-				["LakeView ", 200 ],
+				["LakeView ", 197 ],
 				["River North " , 89 ],
 				["Streeterville " , 67 ],
 				["South Loop " , 90 ],
 				["Boyztown " , 45 ],
-				["Oakbrook " , 10 ]
+				["Oakbrook " , 23 ]
 			]
 		}
 	];
