@@ -19,7 +19,8 @@
     "angular-google-maps": null,
     "html5-boilerplate": null,
     "nvd3": "~1.1.15-beta",
-    "angularjs-nvd3-directives": "~0.0.7"
+    "angularjs-nvd3-directives": "~0.0.7",
+    "angular-chosen-localytics": "~1.0.6"
   },
   "resolutions": {
     "d3": "~3.4.8"

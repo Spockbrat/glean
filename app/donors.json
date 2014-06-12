@@ -1,16 +1,16 @@
 [{
   "id":"1",
-  "name": "Whole1 Foods1",
+  "name": "Whole Foods1",
   "address": "505 Lake Shore Dr2, Chicago",
   "contact": "312-768-5343"
 }, {
   "id":"2",
-  "name": "Whole Foods1",
+  "name": "Whole Foods2",
   "address": "505 Lake Shore Dr1, Chicago",
   "contact": "312-454-5340"
 }, {
   "id":"3",
-  "name": "Whole Foods2",
+  "name": "Whole Foods3",
   "address": "505 Lake Shore Dr4, Chicago",
   "contact": "312-454-5341"
 }]

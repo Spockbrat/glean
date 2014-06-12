@@ -10,6 +10,7 @@ angular.module('myApp', [
   'myApp.controllers',
   'google-maps',
   'nvd3ChartDirectives',
+  'localytics.directives',
   'trNgGrid'
 ]).
 config(['$routeProvider', function($routeProvider) {

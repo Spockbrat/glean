@@ -12,4 +12,7 @@ angular.module('myApp.services', []).
 })
 .factory('RecipientService', function ($resource) {
 	return $resource('recipients.json');
+})
+.factory('DonationService', function ($resource) {
+	return $resource('donations.json');
 });

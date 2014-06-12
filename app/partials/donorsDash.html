@@ -81,40 +81,59 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
+			<div class="panel panel-default" ng-controller="DonateCtrl">
 				<div class="panel-heading">My Donations</div>
 				<div class="panel-body">
 					<div class="col-md-6">
-						<table class="table table-striped" ng-controller="DonateCtrl">
+						<table tr-ng-grid="" class="table table-striped table-bordered table-hover"
+								items="donations" page-items="10" enable-filtering="false" enable-sorting="true" enable-pagination="true">
 							<thead>
 								<tr>
-									<th>Donation</th>
-									<th>Quantity</th>
-									<th>Receiver</th>
-									<th>Date</th>
+									<th field-name="item"></th>
+									<th field-name="category"></th>
+									<th field-name="quantity"></th>
+									<th field-name="recipient.name">Recipient</th>
+									<th field-name="date"></th>
 								</tr>
 							</thead>
-							<tbody>
-								<tr class="animate-repeat" ng-repeat="donation in donations | filter:search">
-									<td>{{$index+1}}</td>
-									<td>{{donation.item}}</td>
-									<td>{{donation.quantity}}</td>
-									<td>{{donation.recipient}}</td>
-									<td>{{donation.date}}</td>
-								</tr>
-							</tbody>
 						</table>
 					</div>
 					<div class="col-md-6">
-						<nvd3-line-chart
-							data="exampleData"
-							width="550"
-							height="550"
-							showXAxis="true"
-							showYAxis="true"
-							xAxisTickFormat="xAxisTickFormat_Date_Format()"
-							yAxisTickFormat="yAxisFormatFunction()">
-						</nvd3-line-chart>
+
+						<div class="pull-right">
+							<select chosen ng-model="chart" id="chart" ng-init="chart='category'">
+							  <option value="category">Category</option>
+							  <option value="recipient">Recipient</option>
+							</select>
+						</div>
+
+						<div ng-show="chart=='category'">
+							<nvd3-discrete-bar-chart
+									data="categoryData"
+									showXAxis="true"
+									showYAxis="true"
+									width="550"
+									height="480"
+									transitionDuration ="350"
+									tooltips="true"
+									showValues="true"
+									showLegend="true">
+							</nvd3-discrete-bar-chart>
+						</div>
+
+						<div ng-show="chart=='recipient'">
+							<nvd3-discrete-bar-chart
+									data="recipientData"
+									showXAxis="true"
+									showYAxis="true"
+									width="550"
+									height="480"
+									transitionDuration ="350"
+									tooltips="true"
+									showValues="true"
+									showLegend="true">
+							</nvd3-discrete-bar-chart>
+						</div>
 					</div>
 				</div>
 			</div>
