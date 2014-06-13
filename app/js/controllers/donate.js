@@ -73,7 +73,7 @@ controllers.controller('DonateCtrl', ['$scope', 'DonationService', function($sco
 				x: Math.floor((Math.random() * 365) + 1)
 			  , y: Math.floor((Math.random() * 100) + 1)
 			  , size: Math.floor((Math.random() * 200) + 1)   //Configure the size of each scatter point
-			  , shape: (Math.random() > 0.95) ? shapes[j % 6] : "circle"  //Configure the shape of each scatter point.
+			  , shape: (Math.random() > 0.95) ? shapes[j % 2] : "circle"  //Configure the shape of each scatter point.
 			  });
 			}
 		  }
